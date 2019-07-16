@@ -1,6 +1,6 @@
 {
   "name": "git-flow-example",
-  "main": "index.js"
+  "main": "index.js",
   "scripts": {
     "test": "echo Done"
   }
