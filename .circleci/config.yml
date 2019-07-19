@@ -35,6 +35,4 @@ jobs:
           name: Start Web server
           command: yarn start
           background: true
-      - run:
-          name: localtunnel
-          command: lt --port 3000
+      - run: yarn localtunnel
