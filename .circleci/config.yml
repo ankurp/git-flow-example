@@ -32,9 +32,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn test
       - run:
-        name: Start Web server
-        command: yarn start
-        background: true
+          name: Start Web server
+          command: yarn start
+          background: true
       - run:
-        name: localtunnel
-        command: lt --port 3000
+          name: localtunnel
+          command: lt --port 3000
