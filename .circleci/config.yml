@@ -36,9 +36,5 @@ jobs:
         command: yarn start
         background: true
       - run:
-        name: Localtunnel
+        name: localtunnel
         command: lt --port 3000
-        background: true
-      - run:
-        name: Wait For Web Server
-        command: sleep 60
