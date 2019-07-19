@@ -25,16 +25,20 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
-
+      - run: yarn global add localtunnel
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       - run: yarn test
-      - run: yarn start
-      - run: yarn global add localtunnel
-      - run: lt --port 3000
+      - run: Web server
+        name: Start Web server
+        command: yarn start
+        background: true
       - run:
-          name: Wait For Web Server
-          command: sleep 60
+        name: Localtunnel
+        command: lt --port 3000
+        background: true
+      - run:
+        name: Wait For Web Server
+        command: sleep 60
