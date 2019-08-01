@@ -2,6 +2,10 @@
   "name": "git-flow-example",
   "main": "index.js",
   "scripts": {
-    "test": "echo Done"
+    "start": "micro",
+    "test": "node ."
+  },
+  "devDependencies": {
+    "micro": "^9.3.4"
   }
 }
